@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 meses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            zoom: 100%;
+            overflow: hidden;
+            width: auto;
+        }
+
+        .contenido{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="">
+        <br><br>
+        <h1 class="display-4 text-center">Selecciona nuestra fecha</h1><br>
+        <hr><br>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center align-items-center contenido">
+                <form id="dateForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="fecha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Iniciar rompecabezas</button>
+                </form>
+                <br>
+                <button>Otros</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        $(document).ready(function () {
+            $('.pieza').css('background-image', 'url(' + foto + ');');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            flatpickr("#fecha", {
+                dateFormat: "Y-m-d"
+            });
+
+            var form = document.getElementById("dateForm");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var selectedDateString = document.getElementById("fecha").value;
+                var selectedDate = new Date(selectedDateString);
+
+                // Agregar un día a la fecha seleccionada
+                selectedDate.setDate(selectedDate.getDate() + 1);
+
+                var targetDate = new Date(2022, 10, 19); // Establecer la fecha objetivo con la zona horaria local
+
+                console.log(selectedDate);
+                console.log(targetDate);
+
+                if (selectedDate.getDate() === targetDate.getDate()) {
+                    window.location.href = "puzzle.html?puzzle=1";
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

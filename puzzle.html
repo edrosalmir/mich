@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>6 meses</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <br>
+        <h1 class="display-1" style="font-weight: bolder;">6 meses de mucho amor</h1>
+        <br>
+    </div>
+    <hr><br>
+
+    <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+            <div class="col">
+                <div class="pieza" id="p1"></div><br>
+                <div class="pieza" id="p2"></div><br>
+                <div class="pieza" id="p3"></div><br>
+                <div class="pieza" id="p4"></div><br>
+            </div>
+            <div class="col">
+                <div class="pieza" id="p5"></div><br>
+                <div class="pieza" id="p6"></div><br>
+                <div class="pieza" id="p7"></div><br>
+                <div class="pieza" id="p8"></div><br>
+            </div>
+            <div class="col">
+                <div class="box">
+                    <div class="quadrant" id="q1"></div>
+                    <div class="quadrant" id="q2"></div>
+                    <div class="quadrant" id="q3"></div>
+                    <div class="quadrant" id="q4"></div>
+                    <div class="quadrant" id="q5"></div>
+                    <div class="quadrant" id="q6"></div>
+                    <div class="quadrant" id="q7"></div>
+                    <div class="quadrant" id="q8"></div>
+                    <div class="quadrant" id="q9"></div>
+                    <div class="quadrant" id="q10"></div>
+                    <div class="quadrant" id="q11"></div>
+                    <div class="quadrant" id="q12"></div>
+                    <div class="quadrant" id="q13"></div>
+                    <div class="quadrant" id="q14"></div>
+                    <div class="quadrant" id="q15"></div>
+                    <div class="quadrant" id="q16"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="pieza" id="p9"></div><br>
+                <div class="pieza" id="p10"></div><br>
+                <div class="pieza" id="p11"></div><br>
+                <div class="pieza" id="p12"></div><br>
+            </div>
+            <div class="col">
+                <div class="pieza" id="p13"></div><br>
+                <div class="pieza" id="p14"></div><br>
+                <div class="pieza" id="p15"></div><br>
+                <div class="pieza" id="p16"></div><br>
+            </div>
+            <div class="col-5 cartita">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <br>
+        <button class="btn btn-large" id="verificarBtn">Verificar</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Set zoom level to 150%
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var variable = urlParams.get('puzzle');
+            var cartita1 = `
+                <p> Parte 1 de 2 </p> 
+                <p>
+                    Este dia decidi hacerte un rompecabezas porque fue una de las primeras actividades que hicimos juntos. 
+                    Fue de las primeras veces que fui a tu casa y que nos senti como una pareja unida. No sé qué tan significativo fue para ti,
+                    pero para mi lo fue bastante porque estar en tu casa platicando de cualquier cosa y armando un rompecabezas de algo que a 
+                    ambos nos gusta fue una señal de la vida para quedarme para siempre.
+                </p>
+
+                <p>
+                    Cuando nos conocimos, nuestras vidas se mezclaron como las piezas de un rompecabezas perfecto. Desde ese momento, 
+                    hemos estado encajando cada pieza poco a poco, construyendo nuestro propio rompecabezas. Y es lo mejor que me ha pasado en la vida. 
+                    Al igual que en un rompecabezas, hemos tenido nuestros desafíos. Ha habido momentos en los que algunas piezas no parecían encajar, 
+                    pero siempre hemos encontrado la manera de resolverlo. Juntos, hemos superado obstáculos, hemos aprendido de nuestros errores 
+                    y hemos crecido más fuertes individualmente y como relación.
+                </p>
+                <p>
+                    Me encanta cómo nuestras piezas encajan tan bien. Nuestras diferencias se complementan perfectamente, creando un equilibrio
+                    lleno de amor. Eres la pieza que siempre he buscado, la pieza que encaja a la perfección en mi vida.
+                </p>
+                <p>
+                    Así que, mi amor, en este aniversario de 6 meses, quiero agradecerte por cada pieza que has aportado a nuestra relación. Gracias por tu 
+                    amor incondicional, gracias por cada risa y por todos esos momentos especiales que hemos compartido juntos.
+                </p>
+                <p>
+                    Estoy emocionado por seguir construyendo este rompecabezas de amor contigo. Nuestro viaje apenas empezó y sé que 
+                    todavía nos esperan muchas cosas más.
+                </p>
+                <p>
+                    Felices 6 meses mi vida, te amo muchisimo y no puedo esperar a seguir encajando piezas junto a ti.
+                </p>
+                <a href="puzzle.html?puzzle=2">Continuar...</a>
+                <br><br>
+            `;
+
+            var cartita2 = `     
+                <p> Parte 2 de 2 </p>                           
+                <p>Es difícil expresar con palabras lo que siento por ti, pero quiero que sepas que mi amor por ti nunca ha disminuido. 
+                    No importa las decisiones drásticas que haya tomado recientemente, quiero asegurarte que mi amor por ti sigue siendo 
+                    tan fuerte como el primer día en que nos conocimos.</p>
+
+                <p>Entiendo que puedas haber sentido que estoy harto de ti, pero quiero que sepas que eso no podría estar más lejos de la verdad. 
+                    Cada momento que paso contigo es especial y valioso para mí. Eres la persona que ilumina mi vida y que me hace ser mejor cada día.
+                     Tu amor y apoyo son fundamentales en mi vida y no puedo imaginar un futuro sin ti a mi lado.</p>
+
+                <p>Es cierto que hemos enfrentado algunos desafíos últimamente, pero quiero que sepas que estoy comprometido a trabajar en nuestra relación. 
+                    Creo que juntos podemos superar cualquier obstáculo que se presente en nuestro camino. Estoy dispuesto a escucharte, 
+                    comprenderte y hacer todo lo posible para fortalecer nuestra conexión.</p>
+
+                <p>Tu felicidad es una de mis prioridades más importantes. Quiero que te sientas amada, valorada y apreciada en cada momento de nuestra relación. 
+                    No quiero que tengas ninguna duda sobre mis sentimientos hacia ti. Eres única y especial para mí, y siempre estaré aquí para ti, 
+                    apoyándote en cada paso que des.</p>
+
+                <p>Quiero aprovechar esta carta para recordarte algunos de los momentos más hermosos que hemos compartido juntos. 
+                    Desde las risas y momentos divertidos hasta las noches en las que hemos consolado nuestros miedos e inseguridades, cada instante a tu lado ha sido un regalo. 
+                    Cada recuerdo que hemos creado juntos se ha convertido en un tesoro para mí.</p>
+
+                <p>No hay nada más importante para mí que tu felicidad y haré todo lo posible para demostrarte cuánto te amo y valoro.</p>
+
+                <p>No puedo esperar para seguir construyendo un futuro increíble junto a ti. Nuestra juventud nos da la oportunidad de crecer y descubrir el mundo juntos. 
+                    Quiero explorar nuevas experiencias y seguir construyendo una relación sólida y duradera a tu lado.</p>
+                
+                <p> Te amo muchisimo y siempre te amaré </p>
+                <br><br>
+            `;
+
+            if (variable == 2) {
+                $('.pieza').addClass('pieza2');
+                $('.cartita').append(cartita2);
+            } else {
+                $('.cartita').append(cartita1);
+            }
+            $('body').css('zoom', '60%');
+        });
+    </script>
+</body>
+
+</html>

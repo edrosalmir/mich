@@ -1,0 +1,68 @@
+.pieza {
+    height: 200px;
+    width: 200px;
+    background-image: url("img/foto1.png");
+}
+
+.pieza2 {
+    height: 200px;
+    width: 200px;
+    background-image: url("img/foto2.png");
+}
+
+.box {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    /* Ajustar el tamaño incluyendo el borde */
+}
+
+.quadrant {
+    width: 25%;
+    height: 25%;
+    box-sizing: border-box;
+    /* Ajustar el tamaño incluyendo el borde */
+    border: 1px solid black;
+}
+
+.btn-large {
+    width: 400px;
+    height: 100px;
+    font-size: 50px;
+    padding: 16px 32px;
+    background-color: #c6302c;
+    border: #c6302c;
+    border-radius: 18px;
+    color: aliceblue;
+}
+
+.btn-large:hover {
+    background-color: #c54a46;
+    border: #ca524e;
+    color: aliceblue;
+}
+
+.cartita {
+    display: none;
+    position: relative;
+    left: 0;
+    font-size: 40px;
+    font-family: 'Crimson Pro', serif;
+    font-weight: bold;
+}
+
+body {
+    background-image: url(img/fondo.png);
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
